@@ -36,7 +36,13 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-9kwe&kr)&kk3lj=+(d6^0!5+9*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',') if os.getenv('ALLOWED_HOSTS') else ["globalnursingacademy.com", "www.globalnursingacademy.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',') if os.getenv('ALLOWED_HOSTS') else [
+    "api.lunarismanagement.com",
+    "lunarismanagement.com",
+    "www.lunarismanagement.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 REST_FRAMEWORK = { 
@@ -247,8 +253,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://globalnursingacademy.com",
-    "https://www.globalnursingacademy.com",
+    "https://lunarismanagement.com",
+    "https://www.lunarismanagement.com",
     "http://localhost:5173",  # Allow frontend development server
 ]
 # CORS_ALLOWED_CREDENTIALS = True  # Allow credentials for CORS; adjust in production
@@ -266,8 +272,8 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 # ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://globalnursingacademy.com",
-    "https://www.globalnursingacademy.com",
+    "https://lunarismanagement.com",
+    "https://www.lunarismanagement.com",
     "http://localhost:5173",
 ]
 # Optional: allow specific methods

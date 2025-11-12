@@ -36,9 +36,15 @@ MIDDLEWARE = [
 import os
 
 # Enable debug temporarily to troubleshoot deployment issues
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["vercel.app", ".vercel.app", ".now.sh", "localhost", "hilal-backend-three.vercel.app"]
+ALLOWED_HOSTS = [
+    "api.lunarismanagement.com",
+    "lunarismanagement.com",
+    "www.lunarismanagement.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Use environment variables for database connection
 DATABASES = {
@@ -57,16 +63,11 @@ DATABASES = {
 }
 
 # Update CORS settings for production
-CORS_ALLOWED_ORIGINS = [
-    "https://hilal-client.vercel.app",
-    "https://hilalclient.vercel.app",
-    "http://localhost:5173"
-]
+CORS_ALLOWED_ORIGINS = ["https://lunarismanagement.com", "https://www.lunarismanagement.com"]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://hilal-client.vercel.app", 
-    "https://hilalclient.vercel.app",
-    "http://localhost:5173"
+    "https://lunarismanagement.com",
+    "https://www.lunarismanagement.com",
 ]
 
 # Enable additional CORS settings

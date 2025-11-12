@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+/* Urdu Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaliq&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+
+.oswald {
+  font-family: 'Oswald', sans-serif;
+}
+.font-poppins{
+ font-family: 'Poppins', 'sans-serif';
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading-text-primary
+{
+  color: #DF1600;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%; /* equivalent to 24px since 100% of 24px = 24px */
+  letter-spacing: -0.03em; /* -3% of 1em */
+  text-transform: uppercase;
+}
+.red-primary{
+  color: #DF1600;
+}
+.font-zen {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+:root {
+  --color-primary: #DF1600;
+  --color-dark: #292D32;
+  --color-gray: #676767;
+  --color-border: #088586; /* default gray-200 */
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.monospace {
+  font-family: var(--bs-font-monospace);
+}
+
+/* text color */
+.color-primary{
+  color: var(--color-primary);
+}
+.color-dark{
+  color: var(--color-dark);
+}
+.color-gray{
+  color: var(--color-gray);
+}
+.color-border{
+  border-color: var(--color-border);
+} 
+
+/* background color */
+.bg-primary{
+  background-color: var(--color-primary);
+}
+.bg-dark{
+  background-color: var(--color-dark);
+}
+.bg-gray{
+  background-color: var(--color-gray);
+}
+
+/* RTL Support */
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+/* RTL specific adjustments */
+.rtl input, 
+.rtl textarea, 
+.rtl select {
+  text-align: right;
+}
+
+.rtl .text-left {
+  text-align: right !important;
+}
+
+.rtl .text-right {
+  text-align: left !important;
+}
+
+/* For dropdowns in RTL */
+.rtl select {
+  padding-right: 2.5rem;
+  padding-left: 0.75rem;
+}
+
+.ltr select {
+  padding-left: 0.75rem;
+  padding-right: 2.5rem;
+}
+
+/* Urdu Font Classes */
+.font-urdu-nastaliq {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+  font-size: 1.25rem; /* 20px - larger for better readability */
+  line-height: 1.8; /* Better line spacing for Urdu text */
+  font-weight: 500;
+}
+
+.font-urdu-nastaliq-lg {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+  font-size: 1.5rem; /* 24px - for headings */
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.font-urdu-nastaliq-xl {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+  font-size: 1.875rem; /* 30px - for large headings */
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.font-urdu-nastaliq-sm {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+  font-size: 1 rem; /* 18px - for smaller text but still readable */
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.font-urdu-nastaliq-sm1 {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+  font-size: 3 rem; /* 18px - for smaller text but still readable */
+  
+  font-weight: 400;
+}
+
+
+/* Urdu Text Specific Styles */
+.urdu-text {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-weight: 500;
+  text-align: right;
+  direction: rtl;
+}
+
+.urdu-heading {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 600;
+  text-align: right;
+  direction: rtl;
+}
+
+/* Fallback for systems without Urdu fonts */
+@supports not (font-family: 'Noto Nastaliq Urdu') {
+  .font-urdu-nastaliq,
+  .font-urdu-nastaliq-lg,
+  .font-urdu-nastaliq-xl,
+  .font-urdu-nastaliq-sm,
+  .urdu-text,
+  .urdu-heading {
+    font-family: 'Arial Unicode MS', 'Tahoma', 'Segoe UI', sans-serif;
+    font-size: 1.1em; /* Slightly larger than default */
+    line-height: 1.6;
+  }
+}
+
+/* News Ticker Animation for Armed Forces News */
+.news-ticker-container {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+
+.news-ticker-content {
+  display: flex;
+  flex-direction: column;
+  animation: tickerScrollUp 25s linear infinite;
+}
+
+.news-ticker-item {
+  padding: 15px 0;
+  flex-shrink: 0;
+}
+
+@keyframes tickerScrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Pause animation on hover for better user experience */
+.news-ticker-container:hover .news-ticker-content {
+  animation-play-state: paused;
+}
+
+/* Article images styling - border for all article images */
+img[src*="/media/uploads/articles/"] {
+  border-color: #df1600;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* Prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+/* Text wrapping utilities */
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+

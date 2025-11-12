@@ -1,0 +1,40 @@
+{
+  "builds": [
+    {
+      "src": "wsgi_vercel.py",
+      "use": "@vercel/python",
+      "config": { 
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.9",
+        "pythonVersion": "3.9"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/api/(.*)/",
+      "dest": "/wsgi_vercel.py",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://hilal-client.vercel.app",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Allow-Credentials": "true"
+      }
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1/"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "wsgi_vercel.py"
+    }
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "backend.settings_production"
+  }
+}

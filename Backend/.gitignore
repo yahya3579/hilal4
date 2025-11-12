@@ -1,0 +1,10 @@
+.env
+db.sqlite3
+.vercel
+# Uploads/media
+/media
+
+# Python cache
+*.pyc
+__pycache__/
+*/__pycache__/

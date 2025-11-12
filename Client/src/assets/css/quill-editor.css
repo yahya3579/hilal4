@@ -1,0 +1,132 @@
+/* Custom Quill Editor Styles */
+.quill {
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.ql-toolbar {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 8px 12px;
+}
+
+.ql-container {
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ql-editor {
+  min-height: 250px;
+  padding: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ql-editor.ql-blank::before {
+  color: #9CA3AF;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Toolbar button styles */
+.ql-toolbar button {
+  margin: 2px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.ql-toolbar button:hover {
+  background-color: #F3F4F6 !important;
+  color: #374151 !important;
+}
+
+.ql-toolbar button.ql-active {
+  background-color: #E5E7EB !important;
+  color: #374151 !important;
+}
+
+/* Dropdown styles */
+.ql-toolbar .ql-picker {
+  margin: 2px;
+}
+
+.ql-toolbar .ql-picker-label {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.ql-toolbar .ql-picker-label:hover {
+  background-color: #F3F4F6 !important;
+  color: #374151 !important;
+}
+
+/* RTL Support */
+.rtl .ql-editor {
+  text-align: right;
+  direction: rtl;
+}
+
+.rtl .ql-toolbar {
+  direction: rtl;
+}
+
+/* Focus states */
+.quill:focus-within {
+  border-color: #E5E7EB;
+  box-shadow: 0 0 0 2px rgba(229, 231, 235, 0.2);
+  transform: none;
+  transition: all 0.2s ease;
+}
+
+/* Custom button colors for better visibility */
+.ql-toolbar .ql-bold,
+.ql-toolbar .ql-italic,
+.ql-toolbar .ql-underline,
+.ql-toolbar .ql-strike {
+  font-weight: bold;
+}
+
+.ql-toolbar .ql-color,
+.ql-toolbar .ql-background {
+  border-radius: 4px;
+}
+
+/* List styles */
+.ql-editor ul,
+.ql-editor ol {
+  padding-left: 20px;
+}
+
+.ql-editor blockquote {
+  border-left: 4px solid #E5E7EB;
+  margin: 16px 0;
+  padding-left: 16px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Code block styles */
+.ql-editor pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 16px 0;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+}
+
+/* Link styles */
+.ql-editor a {
+  color: #3B82F6;
+  text-decoration: underline;
+}
+
+.ql-editor a:hover {
+  color: #1D4ED8;
+}
